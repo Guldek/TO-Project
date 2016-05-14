@@ -1,4 +1,4 @@
-package agh.to.main;
+package agh.to.carfactory;
 
 import java.util.List;
 

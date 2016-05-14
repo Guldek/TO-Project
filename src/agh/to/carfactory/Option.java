@@ -1,4 +1,4 @@
-package agh.to.main;
+package agh.to.carfactory;
 
 public class Option extends CarComponent{
     private String optionName;

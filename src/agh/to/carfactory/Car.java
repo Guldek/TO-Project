@@ -6,7 +6,7 @@ public class Car {
     private String modelName;
     private List<CarComponent> carComponents;
 
-    public int getPrice(){
+    private int getPrice(){
         int sum = 0;
         for (CarComponent component: carComponents) {
             sum += component.getAdditionalFee();
@@ -20,7 +20,7 @@ public class Car {
             System.out.println(carComponent.getDescription());
         }
         System.out.print("Costs: ");
-        System.out.print(getPrice());
+        System.out.print(getPrice()+"\n\n");
     }
 
     protected Car(String modelName, List<CarComponent> components){

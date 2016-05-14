@@ -1,0 +1,2 @@
+1. w component pole jest private przez co jest niedziedzczone
+=> zmieniam na protected => zmiana konstruktorów i dodanie w CarComponent

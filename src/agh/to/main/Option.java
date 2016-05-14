@@ -7,4 +7,9 @@ public class Option extends CarComponent{
         super(additionalFee);
         this.optionName = optionName;
     }
+
+    @Override
+    public String getDescription(){
+        return optionName;
+    }
 }

@@ -1,14 +1,12 @@
 package agh.to.main;
 
-public class CarComponent {
+public abstract class CarComponent {
     protected int additionalFee;
     public int getAdditionalFee() {
         return additionalFee;
     }
 
-    public String getDescription(){
-        return "";
-    }
+    public abstract String getDescription();
 
     public CarComponent(int additionalFee){
         this.additionalFee = additionalFee;

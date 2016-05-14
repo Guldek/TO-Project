@@ -6,18 +6,27 @@ public class Car {
     private String modelName;
     private List<CarComponent> carComponents;
 
-    public int GetPrice(){
+    public int getPrice(){
         int sum = 0;
         for (CarComponent component: carComponents) {
             sum += component.getAdditionalFee();
         }
-        return 0;
+        return sum;
     }
 
-    protected Car(){}
+    public void description(){
+        System.out.println("Car: " + modelName);
+        for(CarComponent carComponent: carComponents){
+            System.out.println(carComponent.getDescription());
+        }
+        System.out.print("Costs: ");
+        System.out.print(getPrice());
+    }
 
     protected Car(String modelName, List<CarComponent> components){
         this.modelName = modelName;
         this.carComponents = components;
     }
+
+
 }

@@ -9,4 +9,9 @@ public class Engine extends CarComponent {
         this.displacement = displacement;
         this.fuel = fuel;
     }
+
+    @Override
+    public String getDescription(){
+        return "displacement: " + String.valueOf(displacement) + "\n" + "fuel: " + fuel;
+    }
 }

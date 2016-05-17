@@ -4,7 +4,7 @@ public class Engine extends CarComponent {
     private float displacement;
     private String fuel;
 
-    public Engine(float displacement, String fuel, int additionalFee) {
+    public Engine(float displacement, String fuel, double additionalFee) {
         super(additionalFee);
         this.displacement = displacement;
         this.fuel = fuel;

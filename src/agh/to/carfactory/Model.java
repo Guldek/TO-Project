@@ -1,14 +1,15 @@
 package agh.to.carfactory;
 
-public abstract class CarComponent {
+public class Model {
+    protected String modelName;
     protected double additionalFee;
     public double getAdditionalFee() {
         return additionalFee;
     }
 
-    public abstract String getDescription();
-
-    public CarComponent(double additionalFee){
+    public Model(String modelName, double additionalFee){
+        this.modelName = modelName;
         this.additionalFee = additionalFee;
     }
+
 }

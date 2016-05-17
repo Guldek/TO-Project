@@ -6,19 +6,19 @@ import java.util.List;
 public class CarFactory {
     private final List<Engine> availableEngines = new LinkedList<>();
     private final List<Option> availableOptions = new LinkedList<>();
-    private final List<String> availableModels = new LinkedList<>();
+    private final List<Model> availableModels = new LinkedList<>();
     private Engine engine = null;
     private List<Option> chosenOptions = new LinkedList<>();
-    private String model = null;
+    private Model model = null;
     public CarFactory() {
-        availableEngines.add(new Engine(1.0f, "gasoline", 10));
-        availableEngines.add(new Engine(1.2f, "gasoline", 10));
+        availableEngines.add(new Engine(1.0f, "gasoline", 10.13));
+        availableEngines.add(new Engine(1.2f, "gasoline", 15.70));
         availableEngines.add(new Engine(1.4f, "gasoline", 10));
         availableEngines.add(new Engine(1.6f, "gasoline", 10));
         availableEngines.add(new Engine(1.6f, "diesel", 10));
         availableEngines.add(new Engine(1.9f, "diesel", 10));
-        availableModels.add("modelA");
-        availableModels.add("modelB");
+        availableModels.add(new Model("modelA", 21000.23));
+        availableModels.add(new Model("modelB", 38000.96));
         availableOptions.add(new Option("Air Conditioner",19));
         availableOptions.add(new Option("GPS",19));
     }
@@ -54,7 +54,7 @@ public class CarFactory {
     }
     public void printModels(){
         for(int i = 0 ; i < availableModels.size(); i++){
-            System.out.println(String.valueOf(i) + ": " + availableModels.get(i));
+            System.out.println(String.valueOf(i) + ": " + availableModels.get(i).modelName);
         }
     }
     public void printOptions(){

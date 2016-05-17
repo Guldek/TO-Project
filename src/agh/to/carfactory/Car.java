@@ -3,19 +3,20 @@ package agh.to.carfactory;
 import java.util.List;
 
 public class Car {
-    private String modelName;
+    private Model model;
     private List<CarComponent> carComponents;
 
-    private int getPrice(){
-        int sum = 0;
+    private double getPrice(){
+        double sum = 0;
         for (CarComponent component: carComponents) {
             sum += component.getAdditionalFee();
         }
+        sum += model.additionalFee;
         return sum;
     }
 
     public void description(){
-        System.out.println("Car: " + modelName);
+        System.out.println("Car: " + model.modelName);
         for(CarComponent carComponent: carComponents){
             System.out.println(carComponent.getDescription());
         }
@@ -23,8 +24,8 @@ public class Car {
         System.out.print(getPrice()+"\n\n");
     }
 
-    protected Car(String modelName, List<CarComponent> components){
-        this.modelName = modelName;
+    protected Car(Model model, List<CarComponent> components){
+        this.model = model;
         this.carComponents = components;
     }
 

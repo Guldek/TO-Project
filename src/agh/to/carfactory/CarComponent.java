@@ -1,7 +1,7 @@
 package agh.to.carfactory;
 
 public abstract class CarComponent {
-    protected double additionalFee;
+    private double additionalFee;
     public double getAdditionalFee() {
         return additionalFee;
     }
